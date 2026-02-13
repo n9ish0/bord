@@ -1,15 +1,15 @@
 // declare
-const bgAudio = new Audio("src/song.mp3");
+const bgAudio = new Audio("./src/song.mp3");
 const popOut = document.querySelector(".pop-out");
 const clickMe = document.querySelector(".btn-bro");
 const paper = document.querySelector(".paper");
-const loveYou = new Audio("src/mwa.mp3")
+const loveYou = new Audio("./src/mwa.mp3")
 const btnCat = document.getElementById("cat");
 //particles
 function createParticles() {
   const container = document.getElementById("heart");
 
-  const heartImages = ["src/heart.PNG"];
+  const heartImages = ["./src/heart.PNG"];
 
   setInterval(() => {
     let particle = document.createElement("img");
