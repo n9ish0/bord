@@ -1,0 +1,127 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    height: 100vh;
+    background: radial-gradient(#FA2A55, #fff);
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.heart img {
+    position: absolute;
+    size: 20px;
+    opacity: 0.8;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.btn-bro {
+    width: 250px;
+    height: auto;
+    background: linear-gradient(to top right, #ff9999 17%, #ffffff 86%);
+    color: #000;
+    text-align: center;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 20px #faf5f5;
+    border-radius: 30px;
+    transition: transform 0.3s ease-in-out;
+    font-family: "Manrope", sans-serif;
+    font-size: normal;
+    font-weight: bold;
+    opacity: 1;
+    transform: translateY(0px);
+
+
+}
+
+.butn {
+    grid-area: 1/1;
+    z-index: 10;
+}
+
+.btn-bro:hover {
+    transform: scale(1.09);
+}
+
+.paper {
+    position: relative;
+    width: 500px;
+    height: 680px;
+    min-height: 500px;
+    background: repeating-linear-gradient(#f1ede9, #f1ede9 31px, #d49494 31px, #d49494 32px);
+    outline: none;
+    font-size: 22px;
+    font-family: "Patrick Hand", cursive;
+    transition: transform 0.5s ease;
+}
+
+.pop-out {
+    grid-area: 1/1;
+    transform: translateY(30px);
+    opacity: 0;
+
+}
+
+.gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif img {
+    height: 100px;
+    width: 100px;
+}
+
+.textt {
+    padding-left: 23px;
+    padding-right: 23px;
+    line-height: 1.45;
+    text-align: justify;
+}
+
+
+.paper.slideOut {
+    transform: translateY(-30px);
+    /* Slide out*/
+}
+
+.bord {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 23px;
+}
+
+/* ADJUST HEIGHT HERE: change the height/line-height values to control click-surprise height */
+.click-suprise {
+    height: 50px;
+    /* <-- change this to adjust the total height */
+    line-height: 50px;
+    /* <-- change this to vertically center the text */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
